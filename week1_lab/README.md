@@ -3,9 +3,9 @@
 ## Learning Objectives
 
 - Run a Java application 
-- Run a Junit test class 
+- Run a Junit test 
 - Modify a Java class
-- Recognize and fix common syntax errors
+- Fix common syntax errors
 
 ## Task 1 - CourseWelcome
 
@@ -22,7 +22,8 @@ Double click on `CourseWelcome.java` to open the file in the editor window.
 
 ![open file from Package Explorer](images/open_file.png)
 
-A Java class with a `main` method represents an executable program.
+A Java class with a `main` method represents an executable program.  The `main` method
+is automatically called when you run the program.
 
 ```java
 public class CourseWelcome {
@@ -52,9 +53,9 @@ Let's execute the program and view the output in the console window.
 ![console output](images/console.png)
 
 
-Sometimes a program has a bug and fails to produce the expected output.   It is important to thoroughly test every Java class to find and fix bugs. 
+Sometimes a program has an error and fails to produce the expected output.   It is important to thoroughly test every Java class to find and fix bugs. 
 
-[Junit](https://junit.org/junit5/) is a popular Java testing framework. `CourseWelcomeTest` is a Junit class that checks the output produced by the `CourseWelcome` class.
+[Junit](https://junit.org/junit5/) is a popular Java testing framework. `CourseWelcomeTest` is a Junit class that tests the `CourseWelcome` class.
 
 - Java class `CourseWelcome`
 - Junit test class `CourseWelcomeTest`
@@ -65,10 +66,9 @@ Let's practice running a Junit test:
 
 1. Click on `CourseWelcomeTest.java`, then click on the green run button.
 ![console output](images/run_test.png)
-2.  The test compares the actual output from executing `CourseWelcome.main` to the expected output. The Junit window appears with a green bar to indicate the test was successful.  
+2.  The test runs the `main` method in `CourseWelcome`, then compares the actual output to the expected output. The Junit window appears with a green bar to indicate the test was successful.  
 ![console output](images/test1_passed.png)
 3. You can close the Junit window after verifying the test passed.
-
 
 ## Task 2 - JavaFacts
 
@@ -86,7 +86,7 @@ public class JavaFacts {
 }
 ```
 
-Assume `JavaFacts` should produce the expected output shown in the table below.  
+Assume `JavaFacts` should produce the expected output displayed below.  
 
 <table border="1">
 <tr>
@@ -99,11 +99,11 @@ Assume `JavaFacts` should produce the expected output shown in the table below.
 </tr>
 </table>
 
-1. Click on `JavaFacts.java`, then click the run button to see the actual output in the console.  The program does not produce the expected output.
+1. Click on `JavaFacts.java`, then click the run button to view the output.  The program does not produce the expected output.
 2. Click on the Junit test class `JavaFactsTest.java`, then click the run button to run the test.  The red bar indicates the test failed.
 ![task 2 test fails](images/test2_failed.png)
 
-Eclipse provides a popup window to compare the actual and expected test results:
+Junit provides a popup window to compare the actual and expected test results:
 
 1. Expand and click on the failed test.
 2. Click the "Compare Actual With Expected Test Result" icon.
@@ -117,13 +117,18 @@ Let's fix `JavaFacts` to produce the expected output.
 2. Run `JavaFacts` and view the output in the console.
 3. Run `JavaFactsTest` and confirm your solution passes the test.
 
+Save your changes to `JavaFacts.java` by selecting File > Save from the menubar, or type `Ctrl-S` (Windows/Linux) or `Command-S` (Mac).
+
+After saving, close the file by clicking the `X` on the editor window tab.
+![close file in editor window](images/close.png) 
+
+
 ## Task 3 - Comments
 
-Java comments are used to help explain the code.  Comments can also be
-used to prevent one or more lines of code from executing.  
+Java comments are used to help explain the code.  Comments can also prevent one or more lines of code from executing.  
 
-- Line comment:  Text following `//` on the same line is ignored.
-- Block or multi-line comment: Text between `/*` and `*/` is ignored. 
+- Line comment:  Text following `//` (slash-slash) is ignored.
+- Block or multi-line comment: Text between `/*` (slash-star) and `*/` (star-slash) is ignored. 
 
 Double click on `Comments.java` in the Package Explorer to open the file in the editor, then run the program to view the output.
 
@@ -161,14 +166,16 @@ public class Comments {
 </tr>
 </table>
 
-- The output does not include "orange", "lemon", or "banana" since the respective print statements are commented out and not executed.  
-- The output does includes "pear" since `//` is placed *after* the print statement.  
+- The output does not include "orange", "lemon", or "banana" since the print statements are commented out.  
+- The output does include "pear" since `//` is placed *after* the print statement.  
 
 Notice the expected output does not include "peach".  Let's add a comment to prevent "peach" from appearing in the output.
 
-1. Use `//` to comment out the last print statement.
+1. Use `//` to comment out the last print statement (don't delete it).
 2. Run `Comments` to view the output.
 3. Run `CommentsTest` to confirm your solution passes the Junit test.  
+
+Save and close any open files.
 
 ## Task 4 - Fixit
 
@@ -197,8 +204,7 @@ public class Fixit {
 </tr>
 </table>
 
-Run the program to view the output.  The expected output is not produced due to the second print statement being commented out.
-
+Run the program to view the output.  The second print statement is commented out so the program does not produce the expected output.
 
 1. Remove the comment characters `//` from the second print statement.
 2. Try to run the program. A warning message appears indicating an error in the code.  Click "Proceed" to try to execute it anyway.
@@ -214,6 +220,7 @@ Every statement in the `main` method must end with a semicolon.  Let's fix the s
 2. Run `Fixit` to view the output.
 3. Run `FixitTest` to confirm your solution passes the Junit test.  
 
+Save and close any open files.
 
 ## Task 5 - SelfIntroduction
 
@@ -231,13 +238,15 @@ public class SelfIntroduction {
 }
 ```
 
-1. Edit `SelfIntroduction` to add print statements to introduce yourself to the instructor. The program should produce at least 4 lines of output.
+1. Edit the `main` method to add print statements to introduce yourself. The program should produce at least 4 lines of output.
 2. Run  `SelfIntroductionTest` to confirm your solution passes the Junit test, which is designed to count the number of lines of output.
 
+Save and close any open files.
 
 ## How to submit your lab solution
 
-1. Right-click on any of the tabs in the editor window and select "Close All".  Make sure you save any unsaved changes to the Java files.
-![close all and save](images/close_all.png)
-2. .....
+If there are any open files in the editor window, right-click on one of the tabs and select "Close All". You will be prompted if there are any unsaved changes. **Save your changes before submitting.**
 
+![close all and save](images/close_all.png)
+
+.....TBD.....
