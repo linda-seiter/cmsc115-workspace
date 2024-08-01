@@ -1,3 +1,11 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+  	border-collapse: collapse;
+  	padding: 4px;
+}
+</style>
+
 # CMSC 115 Week 1 Lab
 
 ## Learning Objectives
@@ -32,7 +40,6 @@ public class CourseWelcome {
         System.out.println("Welcome to CMCS 115.");
         System.out.println("Let's learn Java!");
     }
-
 }
 ```
 
@@ -44,7 +51,7 @@ When the `main` method executes, the two print statements produce the following 
  ```
 
 
-Let's execute the program and view the output in the console window.  
+Let's execute the program and view the output.  
 
 1. Click `CourseWelcome.java` in the Package Explorer to select the file.
 2. Click the green triangular run button on the workbench toolbar. 
@@ -53,9 +60,7 @@ Let's execute the program and view the output in the console window.
 ![console output](images/console.png)
 
 
-Sometimes a program has an error and fails to produce the expected output.   It is important to thoroughly test every Java class to find and fix bugs. 
-
-[Junit](https://junit.org/junit5/) is a popular Java testing framework. `CourseWelcomeTest` is a Junit class that tests the `CourseWelcome` class.
+Sometimes a program has an error and fails to produce the expected output.   It is important to thoroughly test every Java class to find and fix bugs. [Junit](https://junit.org/junit5/) is a popular Java testing framework. For each regular Java class, we use a separate Junit  class to test the functionality.
 
 - Java class `CourseWelcome`
 - Junit test class `CourseWelcomeTest`
@@ -88,7 +93,7 @@ public class JavaFacts {
 
 Assume `JavaFacts` should produce the expected output displayed below.  
 
-<table border="1">
+<table>
 <tr>
 <th>Expected Output</th>
 <th>Actual Output</th>
@@ -99,8 +104,8 @@ Assume `JavaFacts` should produce the expected output displayed below.
 </tr>
 </table>
 
-1. Click on `JavaFacts.java`, then click the run button to view the output.  The program does not produce the expected output.
-2. Click on the Junit test class `JavaFactsTest.java`, then click the run button to run the test.  The red bar indicates the test failed.
+1. Click on `JavaFacts.java`, then click the run button to view the output.  Notice the program does not produce the expected output.
+2. Click on the Junit class `JavaFactsTest.java`, then click the run button to run the test.  The red bar indicates the test failed.
 ![task 2 test fails](images/test2_failed.png)
 
 Junit provides a popup window to compare the actual and expected test results:
@@ -110,14 +115,13 @@ Junit provides a popup window to compare the actual and expected test results:
 3. View the difference in the popup window.
 ![task 2 compare results](images/test2_result_comparison.png)
  
-
 Let's fix `JavaFacts` to produce the expected output. 
 
 1. Edit the second  statement in the `main` method to print the character string "Java is an object-oriented language".  
 2. Run `JavaFacts` and view the output in the console.
 3. Run `JavaFactsTest` and confirm your solution passes the test.
 
-Save your changes to `JavaFacts.java` by selecting File > Save from the menubar, or type `Ctrl-S` (Windows/Linux) or `Command-S` (Mac).
+Save your changes to `JavaFacts.java` by selecting `File > Save` from the menu bar, or type `Ctrl-S` (Windows/Linux) or `Command-S` (Mac).
 
 After saving, close the file by clicking the `X` on the editor window tab.
 ![close file in editor window](images/close.png) 
@@ -125,7 +129,7 @@ After saving, close the file by clicking the `X` on the editor window tab.
 
 ## Task 3 - Comments
 
-Java comments are used to help explain the code.  Comments can also prevent one or more lines of code from executing.  
+Java comments can be used to help explain the code.  A comment can also prevent one or more lines of code from executing.  
 
 - Line comment:  Text following `//` (slash-slash) is ignored.
 - Block or multi-line comment: Text between `/*` (slash-star) and `*/` (star-slash) is ignored. 
@@ -155,7 +159,7 @@ public class Comments {
 }
 ```
 
-<table border="1">
+<table>
 <tr>
 <th>Expected Output</th>
 <th>Actual Output</th>
@@ -166,12 +170,12 @@ public class Comments {
 </tr>
 </table>
 
-- The output does not include "orange", "lemon", or "banana" since the print statements are commented out.  
-- The output does include "pear" since `//` is placed *after* the print statement.  
+- The print statements for "orange", "lemon", and "banana" are commented out and do not execute.  
+- The print statement for "pear" executes since `//` is placed *after* the statement.  
 
-Notice the expected output does not include "peach".  Let's add a comment to prevent "peach" from appearing in the output.
+Notice the expected output does not include "peach".  
 
-1. Use `//` to comment out the last print statement (don't delete it).
+1. Add `//` to comment out the last print statement.
 2. Run `Comments` to view the output.
 3. Run `CommentsTest` to confirm your solution passes the Junit test.  
 
@@ -193,7 +197,7 @@ public class Fixit {
 }
 ```
 
-<table border="1">
+<table>
 <tr>
 <th>Expected Output</th>
 <th>Actual Output</th>
@@ -222,7 +226,106 @@ Every statement in the `main` method must end with a semicolon.  Let's fix the s
 
 Save and close any open files.
 
-## Task 5 - SelfIntroduction
+## Task 5 - Printing
+
+Double click on `Printing.java` in the Package Explorer to open the file in the editor.   
+
+```java
+public class Printing {
+
+	public static void main(String[] args) {
+		System.out.println("red ");
+		System.out.print("green ");	
+		System.out.println("blue ");	
+		System.out.print("pink ");	
+		System.out.println("yellow");	
+	}
+
+}
+```
+
+- `System.out.println`: Appends a newline character. Subsequent output appears on the next line.	
+- `System.out.print` : Does not append a newline character. Subsequent output appears on the same line. 
+
+<table>
+<tr>
+<th>Expected Output</th>
+<th>Actual Output</th>
+</tr>
+<tr>
+<td>red <br>green blue <br>pink <br>yellow</td>
+<td>red <br>green blue <br>pink yellow<br><br></td>
+</tr>
+</table>
+
+Run the program to view the output.
+
+
+1. Adjust the statement so "yellow" appears on a separate line.
+2. Run `Printing` to view the output.
+3. Run `PrintingTest` to confirm your solution passes the Junit test.  
+
+Save and close any open files.
+ 
+
+
+## Task 6 - MathematicalExpression
+
+Double click on `MathematicalExpression.java` in the Package Explorer to open the file in the editor.  
+
+
+```java
+public class MathematicalExpression {
+	
+	public static void main(String[] args) {
+		System.out.print("5 + 7 = ");   //5 + 7 =
+		System.out.println(5 + 7);        //12
+	}
+
+}
+```
+
+Run the program and confirm the output as shown below:
+
+```text
+5 + 7 = 12
+```
+
+
+A `String` is a sequence of characters surrounded by double quotes.  An unquoted arithmetic expression evaluates to a numeric value. 
+
+<table>
+<tr>
+<td>Expression</td><td>Value</td>
+</tr>
+<tr>
+<td>"5 + 7 = "</td><td>"5 + 7 = "</td>
+</tr>
+<tr>
+<td>5 + 7</td><td>12</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th>Expected Output</th>
+<th>Actual Output</th>
+</tr>
+<tr>
+<td>(2 + 3) * 8 = 40</td>
+<td>2 + 3 * 8 = 26</td>
+</tr>
+</table>
+
+1. Adjust the 2 print statements to produce the expected output, adding parenthesis to both the string and the mathematical expression.  
+2. Run `MathematicalExpression` to view the output.
+3. Run `MathematicalExpressionTest` to confirm your solution passes the Junit test.  
+
+Save and close any open files.
+ 
+
+## Task 7 - SelfIntroduction
 
 Double click on `SelfIntroduction.java` in the Package Explorer to open the file in the editor.   
 
