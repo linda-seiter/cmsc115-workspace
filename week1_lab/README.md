@@ -7,7 +7,16 @@
 - Modify a Java class
 - Fix common syntax errors
 
-## Task 1 - CourseWelcome
+## Introduction
+
+...
+
+## Setup
+
+....
+
+
+## Task 1 - CourseWelcome.java
 
 
 The  Package Explorer displays a lab project for each week.
@@ -67,7 +76,7 @@ Let's practice running a Junit test:
 ![console output](images/test1_passed.png)
 3. You can close the Junit window after verifying the test passed.
 
-## Task 2 - JavaFacts
+## Task 2 - JavaFacts.java
 
 
 Double click on `JavaFacts.java` in the Package Explorer to open the file in the editor. 
@@ -115,7 +124,7 @@ After saving, close the file by clicking the `X` on the editor window tab.
 ![close file in editor window](images/close.png) 
 
 
-## Task 3 - Comments
+## Task 3 - Comments.java
 
 Java comments can be used to help explain the code.  A comment can also prevent one or more lines of code from executing.  
 
@@ -164,7 +173,7 @@ Notice the expected output does not include "peach".  Let's fix the program to p
 
 Save and close any open files.
 
-## Task 4 - Fixit
+## Task 4 - Fixit.java
 
 Double click on `Fixit.java` in the Package Explorer to open the file in the editor.   
 
@@ -205,7 +214,7 @@ Every statement in the `main` method must end with a semicolon.  Let's fix the s
 
 Save and close any open files.
 
-## Task 5 - Printing
+## Task 5 - Printing.java
 
 Double click on `Printing.java` in the Package Explorer to open the file in the editor.   
 
@@ -247,7 +256,7 @@ Save and close any open files.
  
 
 
-## Task 6 - MathematicalExpression
+## Task 6 - MathematicalExpression.java
 
 Double click on `MathematicalExpression.java` in the Package Explorer to open the file in the editor.  
 
@@ -303,7 +312,7 @@ A `String` is a sequence of characters surrounded by double quotes.  An unquoted
 Save and close any open files.
  
 
-## Task 7 - SelfIntroduction
+## Task 7 - SelfIntroduction.java
 
 Double click on `SelfIntroduction.java` in the Package Explorer to open the file in the editor.   
 
@@ -324,7 +333,7 @@ public class SelfIntroduction {
 
 Save and close any open files.
 
-## How to submit your lab solution
+## Submit Your Solution
 
 If there are any open files in the editor window, right-click on one of the tabs and select "Close All". You will be prompted if there are any unsaved changes. **Save your changes before submitting.**
 
