@@ -23,6 +23,6 @@ public class TestUtility {
         System.setIn(standardIn);
         System.setOut(standardOut);
         return outputStreamCaptor.toString().trim();
-    }
+    } 
     
 }

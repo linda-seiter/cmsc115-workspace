@@ -1,11 +1,3 @@
-<style>
-table, th, td {
-    border: 1px solid black;
-  	border-collapse: collapse;
-  	padding: 4px;
-}
-</style>
-
 # CMSC 115 Week 1 Lab
 
 ## Learning Objectives
@@ -93,19 +85,14 @@ public class JavaFacts {
 
 Assume `JavaFacts` should produce the expected output displayed below.  
 
-<table>
-<tr>
-<th>Expected Output</th>
-<th>Actual Output</th>
-</tr>
-<tr>
-<td>Java was initially named Oak.<br>Java is an object-oriented language.</td>
-<td>Java was initially named Oak.<br>Java is a language.</td>
-</tr>
-</table>
+
+|Expected Output|Actual Output|
+|----|----|
+|Java was initially named Oak.<br>Java is an object-oriented language.|Java was initially named Oak.<br>Java is a language.|
 
 1. Click on `JavaFacts.java`, then click the run button to view the output.  Notice the program does not produce the expected output.
 2. Click on the Junit class `JavaFactsTest.java`, then click the run button to run the test.  The red bar indicates the test failed.
+
 ![task 2 test fails](images/test2_failed.png)
 
 Junit provides a popup window to compare the actual and expected test results:
@@ -124,6 +111,7 @@ Let's fix `JavaFacts` to produce the expected output.
 Save your changes to `JavaFacts.java` by selecting `File > Save` from the menu bar, or type `Ctrl-S` (Windows/Linux) or `Command-S` (Mac).
 
 After saving, close the file by clicking the `X` on the editor window tab.
+
 ![close file in editor window](images/close.png) 
 
 
@@ -131,8 +119,8 @@ After saving, close the file by clicking the `X` on the editor window tab.
 
 Java comments can be used to help explain the code.  A comment can also prevent one or more lines of code from executing.  
 
-- Line comment:  Text following `//` (slash-slash) is ignored.
-- Block or multi-line comment: Text between `/*` (slash-star) and `*/` (star-slash) is ignored. 
+- Line comment:  Text following `//` is ignored.
+- Block or multi-line comment: Text between `/*`  and `*/` is ignored. 
 
 Double click on `Comments.java` in the Package Explorer to open the file in the editor, then run the program to view the output.
 
@@ -142,40 +130,35 @@ public class Comments {
 	public static void main(String[] args) {
 
 		System.out.println("apple"); 
-		
+
 		//System.out.println("orange");
-		
+
 		System.out.println("pear");  //End of line comment
 
 		/*
-        System.out.println("lemon");
-        System.out.println("banana");
-		*/
-		
+		System.out.println("lemon");
+		System.out.println("banana");
+		 */
+
 		System.out.println("watermelon");
-		
-		System.out.println("peach");
+
+		System.out.println("peach"); 
 	}
 }
+
 ```
 
-<table>
-<tr>
-<th>Expected Output</th>
-<th>Actual Output</th>
-</tr>
-<tr>
-<td>apple<br>pear<br>watermelon<br><br></td>
-<td>apple<br>pear<br>watermelon<br>peach</td>
-</tr>
-</table>
+
+|Expected Output|Actual Output|
+|----|----|
+|apple<br>pear<br>watermelon<br><br>|apple<br>pear<br>watermelon<br>peach|
 
 - The print statements for "orange", "lemon", and "banana" are commented out and do not execute.  
 - The print statement for "pear" executes since `//` is placed *after* the statement.  
 
-Notice the expected output does not include "peach".  
+Notice the expected output does not include "peach".  Let's fix the program to produce the expected output:
 
-1. Add `//` to comment out the last print statement.
+1. Add `//` to comment out the last print statement (don't delete it!).
 2. Run `Comments` to view the output.
 3. Run `CommentsTest` to confirm your solution passes the Junit test.  
 
@@ -197,16 +180,11 @@ public class Fixit {
 }
 ```
 
-<table>
-<tr>
-<th>Expected Output</th>
-<th>Actual Output</th>
-</tr>
-<tr>
-<td>ship<br>airplane<br>tank</td>
-<td>ship<br>tank<br><br></td>
-</tr>
-</table>
+
+|Expected Output|Actual Output|
+|----|----|
+|ship<br>airplane<br>tank|ship<br>tank<br><br>|
+
 
 Run the program to view the output.  The second print statement is commented out so the program does not produce the expected output.
 
@@ -216,6 +194,7 @@ Run the program to view the output.  The second print statement is commented out
 3. The program fails to run. The error message indicates line 5 is missing a semicolon. 
 ![compilation error message in console](images/console_error_message.png)
 4. Notice the editor window also displays red warning symbols on line 5. Hover the mouse over either warning symbol to view the error message.
+
 ![compiler displays warning symbol near syntax error](images/compiler_warning.png)
 
 Every statement in the `main` method must end with a semicolon.  Let's fix the syntax error so the program can execute.
@@ -258,10 +237,9 @@ public class Printing {
 </tr>
 </table>
 
-Run the program to view the output.
+Run the program to view the output.  In the expected output, "yellow" appears on a separate line from "pink".  Let's fix the program to produce the expected output:
 
-
-1. Adjust the statement so "yellow" appears on a separate line.
+1. Adjust the statement `System.out.print("pink ");` so a newline character is appended after printing "pink". 
 2. Run `Printing` to view the output.
 3. Run `PrintingTest` to confirm your solution passes the Junit test.  
 

@@ -10,7 +10,7 @@ public class CommentsTest {
     public void mainIOTest() {
         String expected = "apple\n"
         		+ "pear\n"
-        		+ "watermelon";
+        		+ "watermelon"; 
         String actual = TestUtility.getOutput("Comments", null);
         assertEquals(expected, actual);
     }
