@@ -1,3 +1,12 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding: 4px;
+  border-collapse: collapse;
+  
+  }
+</style>
+
 # CMSC 115 Week 1 Lab
 
 ## Learning Objectives
@@ -6,14 +15,6 @@
 - Run a Junit test 
 - Modify a Java class
 - Fix common syntax errors
-
-## Introduction
-
-...
-
-## Setup
-
-....
 
 
 ## Task 1 - CourseWelcome.java
@@ -95,9 +96,16 @@ public class JavaFacts {
 Assume `JavaFacts` should produce the expected output displayed below.  
 
 
-|Expected Output|Actual Output|
-|----|----|
-|Java was initially named Oak.<br>Java is an object-oriented language.|Java was initially named Oak.<br>Java is a language.|
+<table>
+<tr>
+<th>Expected Output</th>
+<th>Actual Output</th>
+</tr>
+<tr>
+<td>Java was initially named Oak.<br>Java is an object-oriented language.</td>
+<td>Java was initially named Oak.<br>Java is a language.</td>
+</tr>
+</table>
 
 1. Click on `JavaFacts.java`, then click the run button to view the output.  Notice the program does not produce the expected output.
 2. Click on the Junit class `JavaFactsTest.java`, then click the run button to run the test.  The red bar indicates the test failed.
@@ -158,9 +166,16 @@ public class Comments {
 ```
 
 
-|Expected Output|Actual Output|
-|----|----|
-|apple<br>pear<br>watermelon<br><br>|apple<br>pear<br>watermelon<br>peach|
+<table>
+<tr>
+<th>Expected Output</th>
+<th>Actual Output</th>
+</tr>
+<tr>
+<td>apple<br>pear<br>watermelon<br><br></td>
+<td>apple<br>pear<br>watermelon<br>peach</td>
+</tr>
+</table>
 
 - The print statements for "orange", "lemon", and "banana" are commented out and do not execute.  
 - The print statement for "pear" executes since `//` is placed *after* the statement.  
@@ -190,20 +205,26 @@ public class Fixit {
 ```
 
 
-|Expected Output|Actual Output|
-|----|----|
-|ship<br>airplane<br>tank|ship<br>tank<br><br>|
+<table>
+<tr>
+<th>Expected Output</th>
+<th>Actual Output</th>
+</tr>
+<tr>
+<td>ship<br>airplane<br>tank</td>
+<td>ship<br>tank<br><br></td>
+</tr>
+</table>
 
 
 Run the program to view the output.  The second print statement is commented out so the program does not produce the expected output.
 
 1. Remove the comment characters `//` from the second print statement.
-2. Try to run the program. A warning message appears indicating an error in the code.  Click "Proceed" to try to execute it anyway.
+2. Try to run the program. A warning message appears indicating an error in the code.  Click "Proceed" to try to execute it anyway.<br>
 ![run warning](images/run_warning.png)
-3. The program fails to run. The error message indicates line 5 is missing a semicolon. 
+3. The program fails to run. The error message indicates line 5 is missing a semicolon. <br>
 ![compilation error message in console](images/console_error_message.png)
-4. Notice the editor window also displays red warning symbols on line 5. Hover the mouse over either warning symbol to view the error message.
-
+4. Notice the editor window also displays red warning symbols on line 5. Hover the mouse over either warning symbol to view the error message. <br>
 ![compiler displays warning symbol near syntax error](images/compiler_warning.png)
 
 Every statement in the `main` method must end with a semicolon.  Let's fix the syntax error so the program can execute.
@@ -266,7 +287,7 @@ public class MathematicalExpression {
 	
 	public static void main(String[] args) {
 		System.out.print("5 + 7 = ");   //5 + 7 =
-		System.out.println(5 + 7);        //12
+		System.out.println(5 + 7);      //12
 	}
 
 }
@@ -293,6 +314,7 @@ A `String` is a sequence of characters surrounded by double quotes.  An unquoted
 </tr>
 </table>
 
+<br>
 
 <table>
 <tr>
@@ -329,7 +351,7 @@ public class SelfIntroduction {
 ```
 
 1. Edit the `main` method to add print statements to introduce yourself. The program should produce at least 4 lines of output.
-2. Run  `SelfIntroductionTest` to confirm your solution passes the Junit test, which is designed to count the number of lines of output.
+2. Run `SelfIntroductionTest` to confirm your solution passes the Junit test. The test is designed to count the number of lines of output.
 
 Save and close any open files.
 
