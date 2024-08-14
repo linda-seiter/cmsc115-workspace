@@ -3,24 +3,24 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SeafoodMarketTest {
+public class PizzaSharesTest {
 
     @Test
-    @DisplayName("SeafoodMarket.main prints correct output for input: 5 8.99")
+    @DisplayName("WeeklyPay.main prints correct output for input: 5 8.99")
     public void mainIOTest1() {
     	String input = "5 8.99";
         String expected = "Enter pounds of fish and price per pound: "
-        		+ "5.0 lbs at $8.99 per lb = $44.95";
+        		+ "5 lbs at $8.99 per lb = $44.95";
         String actual = TestUtility.getOutput("SeafoodMarket", input);
         assertEquals(expected, actual);
     }
     
     @Test
-    @DisplayName("SeafoodMarket.main prints correct output for input: 3.25 15.99")
+    @DisplayName("WeeklyPay.main prints correct output for input: 7 12.25")
     public void mainIOTest2() {
-    	String input = "3.25 15.99";
+    	String input = "7 12.25";
         String expected = "Enter pounds of fish and price per pound: "
-        		+ "3.25 lbs at $15.99 per lb = $51.97";
+        		+ "7 lbs at $12.25 per lb = $85.75";
         String actual = TestUtility.getOutput("SeafoodMarket", input);
         assertEquals(expected, actual);
     }

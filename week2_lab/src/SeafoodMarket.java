@@ -8,13 +8,13 @@ public class SeafoodMarket {
 		
 		//TODO: Update to prompt for pounds of fish and price per pound
 		System.out.print("Enter pounds of fish and price per pound: ");
-		int lbsFish = input.nextInt();
+		double lbsFish = input.nextDouble();
 		double pricePerPound = input.nextDouble();
 		
 		//Calculate cost
 		double totalCost = lbsFish * pricePerPound;
 		//Round to 2 digits after decimal point
-		//totalCost = (int)(totalCost * 100) / 100;
+		//totalCost = (int)(totalCost * 100 + 0.5) / 100.0;
 		
 		//Output cost
 		System.out.println(lbsFish + " lbs at $" + pricePerPound + " per lb = $" + totalCost );

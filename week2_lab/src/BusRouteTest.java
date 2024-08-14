@@ -9,14 +9,14 @@ public class BusRouteTest {
     @DisplayName("BusRoute.main prints correct output")
     public void mainIOTest() {
         String expected = "Bus begins its route\n"
-        		+ "7 people get on at stop#1\n"
-        		+ "Departing stop#1 with 7 passengers\n"
-        		+ "5 people get off at stop#2\n"
-        		+ "2 people get on at stop#2\n"
-        		+ "Departing stop#2 with 4 passengers\n"
-        		+ "3 people get off at stop#3\n"
-        		+ "8 people get on at stop#3\n"
-        		+ "Departing stop#3 with 9 passengers";
+        		+ "8 passengers get on at stop#1\n"
+        		+ "Departing stop#1 with 8 passengers\n"
+        		+ "2 passengers get off at stop#2\n"
+        		+ "Departing stop#2 with 6 passengers\n"
+        		+ "Half the passengers get off at stop#3\n"
+        		+ "Departing stop#3 with 3 passengers\n"
+        		+ "The number of passengers triples at stop#4\n"
+        		+ "Departing stop#4 with 9 passengers";
         String actual = TestUtility.getOutput("BusRoute", null);
         assertEquals(expected, actual);
     }
